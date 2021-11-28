@@ -118,7 +118,7 @@ namespace P3_3_1204004
 
             else if ((angka2.Text == ""))
             {
-                epWarning.SetError(email, "Textbox Huruf tidak boleh kosong");
+                epWarning.SetError(angka2, "Textbox Huruf tidak boleh kosong");
 
             }
 
