@@ -1,0 +1,9 @@
+D:\dotnethoi\P3_3_1204004\P3_3_1204004\bin\Debug\P3_3_1204004.exe.config
+D:\dotnethoi\P3_3_1204004\P3_3_1204004\obj\Debug\P3_3_1204004.Form1.resources
+D:\dotnethoi\P3_3_1204004\P3_3_1204004\obj\Debug\P3_3_1204004.Properties.Resources.resources
+D:\dotnethoi\P3_3_1204004\P3_3_1204004\obj\Debug\P3_3_1204004.csproj.GenerateResource.Cache
+D:\dotnethoi\P3_3_1204004\P3_3_1204004\bin\Debug\P3_3_1204004.exe
+D:\dotnethoi\P3_3_1204004\P3_3_1204004\bin\Debug\P3_3_1204004.pdb
+D:\dotnethoi\P3_3_1204004\P3_3_1204004\obj\Debug\P3_3_1204004.exe
+D:\dotnethoi\P3_3_1204004\P3_3_1204004\obj\Debug\P3_3_1204004.pdb
+D:\dotnethoi\P3_3_1204004\P3_3_1204004\obj\Debug\P3_3_1204004.csprojResolveAssemblyReference.cache
