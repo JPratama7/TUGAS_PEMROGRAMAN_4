@@ -21,7 +21,7 @@ namespace P4_4_1204004
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Numerik : " + tbnum.Text + "\nChar : " + tbchar.Text + "\nRequired: " + tbreq.Text + "\nRegex : " + tbregex.Text + "\nComparison : " + tbcom1.Text + " " + tbcom2.Text + "\nLength : " + tbleng.Text + "\nUpper : " + tbupper.Text + "\nLower : " + tblower.Text);
+            MessageBox.Show("No. Telp : " + tbnum.Text + "\nNama : " + tbchar.Text + "\nEmail : " + tbregex.Text + "\nPerbandingan : " + tbcom1.Text + " " + tbcom2.Text + "\nPassword : " + tbleng.Text + "\nNama dalam UPPERCASE : " + tbupper.Text + "\nusername dalam lowercase : " + tblower.Text);
 
         }
 
@@ -42,28 +42,14 @@ namespace P4_4_1204004
 
         private void tbchar_Leave(object sender, EventArgs e)
         {
-            char tbcharval;
-            if (char.TryParse(tbchar.Text, out tbcharval))
-            {
-                epbenar.SetError(tbchar, "OK");
-            }
-
-            else
-            {
-                epwarn.SetError(tbchar, "Silahkan Diisi");
-            }
-        }
-
-        private void tbreq_Leave(object sender, EventArgs e)
-        {
+ 
             if (tbchar.Text != "")
             {
-                epbenar.SetError(tbreq, "OK");
+                epbenar.SetError(tbchar, "OK NAMA VALID");
             }
-
             else
             {
-                epwarn.SetError(tbreq, "Silahkan Diisi");
+                epwarn.SetError(tbchar, "NAMA HARUS DIISI");
             }
         }
 
@@ -83,15 +69,6 @@ namespace P4_4_1204004
         {
             if ((tbcom1.Text).All(Char.IsNumber))
             {
-                if (tbcom1.Text == "")
-                {
-                    epwarn.SetError(tbcom1, "Angka 2 Belum terisi");
-                }
-
-                else
-                {
-                    epbenar.SetError(tbcom1, "Angka 2 Terisi");
-                }
             }
 
             else if (tbcom1.Text == "")
@@ -116,13 +93,14 @@ namespace P4_4_1204004
                 int.TryParse(tbcom2.Text, out Angka2);
                 if (Angka1 > Angka2)
                 {
-                    epbenar.SetError(tbcom2, "Angka 1 lebih besar dari angka 2 ");
+                    epbenar.SetError(tbcom1, "Angka 1 lebih besar dari angka 2 ");
+                    epwarn.SetError(tbcom2, "Angka 2 lebih kecil dari angka 1 ");
                 }
 
                 else
                 {
                     epbenar.SetError(tbcom2, "Angka 2 lebih besar dari angka 1 ");
-
+                    epwarn.SetError(tbcom1, "Angka 1 lebih kecil dari angka 2 ");
                 }
             }
 
@@ -143,7 +121,15 @@ namespace P4_4_1204004
             if (tbleng.Text != "")
             {
                 int length = tbleng.Text.Length;
-                epbenar.SetError(tbleng, "Banyak Kata : " + length);
+                if (length > 5)
+                {
+                    epbenar.SetError(tbleng, "Password Valid");
+                }
+                else
+                {
+                    epwarn.SetError(tbleng, "Password Erorr");
+                }
+                
             }
             else
             {
